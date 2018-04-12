@@ -35,6 +35,10 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    number_format:
+        thousands_separator: ','
+    form_themes:
+        - bootstrap_4_layout.html.twig
 
 # Doctrine Configuration
 doctrine:
@@ -65,3 +69,9 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+easy_admin:
+    entities:
+        User:
+            class: AppBundle\Entity\User
+            label: "Users"
