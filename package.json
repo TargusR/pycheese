@@ -1,0 +1,11 @@
+{
+  "name": "confuror_registry",
+  "version": "1.0.0",
+  "description": "Registry platform for Confuror antendees",
+  "main": "index.php",
+  "author": "Targus R. <targusr@live.com.mx>",
+  "license": "MIT",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.19.0"
+  }
+}
