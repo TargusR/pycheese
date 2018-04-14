@@ -1,4 +1,4 @@
-Convention registry
+Project Cheese
 =================
 
 Registro de asistentes
