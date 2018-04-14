@@ -13,48 +13,58 @@
 - Formulario de registro de taller/panel/actividad
 
 
-## Entidades
+## Entity
 
-### Visitante (Usuario y Visitante)
-- Nombre
-- Correo
-- Edad
-- :: Acceso
-- :: Playeras
-- :: Pagos
+### User.php
+- Id
+- Username
+- Email
+- Roles
+- :: Attendee (single)
 
-### Pagos
-- :: Visitante
-- Fecha
-- Cantidad
-- Concepto (String)
-- Validad (Bool)
-- Redimido (Bool)
+### Attendee.php
+- :: User
+- Name
+- Age
+- Badge Tag
+- Access level
+- Year
+- :: Shirts (multiple)
+- :: Payments (multiple)
 
-### Acceso (UNICO)
-- Nombre del acceso {Entrada general, Sponsor, Super Sponsor}
-- Precio
-- Vigencia
-- Descripción
-- Cantidad de playeras
-- Ilimitado (bool)
-- Inventario
-- Nivel (int)
-- Mejorable (bool)
-- Oculto (bool)
+### Payment.php
+- :: Attendee (Single)
+- Date
+- Amount
+- Concept (String)
+- Validated (Bool)
+- Redeem (Bool)
 
-### Feature
-- Nombre del feature { Playera extra }
-- Precio
-- Vigencia
-- Descripción
-- Cantidad de playeras
-- Inventario
-- Ilimitado (bool)
-- Oculto
+### Access.php
+- Name [Entrada general, Sponsor, Super Sponsor]
+- Cost
+- Valid Until (date)
+- Description
+- Amount Of Shirts
+- Unlimited (bool)
+- Inventory
+- Level (int)
+- Upgradable (bool)
+- Hidden (bool)
+- :: Attendee (Multiple)
 
-### Playeras
-- :: Visitante
+### Feature.php
+- Name [Playera extra]
+- Cost
+- Valid Until (Date)
+- Description
+- Amount Of Shirts
+- Unlimited (bool)
+- Inventory
+- Hidden
+
+### Shirt.php
+- :: Attendee (Single)
 - Talla
 - Diseño
 - Color (?)
