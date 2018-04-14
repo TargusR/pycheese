@@ -1,4 +1,4 @@
-** Cosas pendientes
+## Cosas pendientes
 - Registro de usuario nuevo (Login)
 - Codificar entidades del registro
 - Configurar entidades en EasyAdmin
@@ -13,9 +13,9 @@
 - Formulario de registro de taller/panel/actividad
 
 
-** Entidades
+## Entidades
 
-*** Visitante (Usuario y Visitante)
+### Visitante (Usuario y Visitante)
 - Nombre
 - Correo
 - Edad
@@ -23,7 +23,7 @@
 - :: Playeras
 - :: Pagos
 
-*** Pagos
+### Pagos
 - :: Visitante
 - Fecha
 - Cantidad
@@ -31,7 +31,7 @@
 - Validad (Bool)
 - Redimido (Bool)
 
-*** Acceso (UNICO)
+### Acceso (UNICO)
 - Nombre del acceso {Entrada general, Sponsor, Super Sponsor}
 - Precio
 - Vigencia
@@ -43,7 +43,7 @@
 - Mejorable (bool)
 - Oculto (bool)
 
-*** Feature
+### Feature
 - Nombre del feature { Playera extra }
 - Precio
 - Vigencia
@@ -53,7 +53,7 @@
 - Ilimitado (bool)
 - Oculto
 
-*** Playeras
+### Playeras
 - :: Visitante
 - Talla
 - Diseño
@@ -61,14 +61,14 @@
 
 ---
 
-*** Mesa de venta
+### Mesa de venta
 - :: Visitante
 - Nombre comercial
 - Ofrece comisiones durante el evento (Bool)
 - Aceptado
 - Pagado
 
-*** Contenido
+### Contenido
 - :: Visitante
 - Tipo {Panel, taller, Meeting}
 - Presupuesto estimado de Materiales
