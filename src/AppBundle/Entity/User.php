@@ -1,5 +1,16 @@
 <?php
 
+/*
+:: User.php ::
+- Id
+- Email (Masked as username)
+- Roles
+- paswordHash
+- :: Attendee (multiple)
+- :: Dealer (multiple)
+- :: Content (multiple)
+*/ 
+
 namespace AppBundle\Entity;
 
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -23,12 +34,6 @@ class User implements UserInterface
 
   /**
    * @Assert\NotBlank()
-   * @ORM\Column(type="string")
-   */
-  private $name;
-
-  /**
-   * @Assert\NotBlank()
    * @Assert\Email()
    * @ORM\Column(type="string", unique=true)
    */
@@ -46,6 +51,9 @@ class User implements UserInterface
    * @var string
    */
   private $plainPassword;
+
+  // TODO
+  // private $attendee;
 
   /**
    * @ORM\Column(type="json_array")
@@ -115,16 +123,6 @@ class User implements UserInterface
     // forces the object to look "dirty" to Doctrine. Avoids
     // Doctrine *not* saving this entity, if only plainPassword changes
     $this->password = null;
-  }
-
-  public function getName()
-  {
-    return $this->name;
-  }
-
-  public function setName($name)
-  {
-    $this->name = $name;
   }
 
   public function setEmail($email)
